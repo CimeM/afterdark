@@ -1,0 +1,224 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Ljubljana After Dark</title>
+	<meta name="title" content="" />
+	<meta name="description" content="one page scroller website" />
+	<link rel="image_src" href="/images/notify_better_image.png" />
+
+	<meta content="" property="og:url" />
+	<meta content="" property="og:image" />
+	<!-- <link rel="shortcut icon" id="favicon" href="favicon.png"> -->
+	<meta name="author" content="Pete R.">
+	<link rel="canonical" href="" />
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,700' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Pacifico:400' rel='stylesheet' type='text/css'>
+	<script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.js"></script>
+  <script type="text/javascript" src="jquery.onepage-scroll.js"></script>
+  <link href='onepage-scroll.css' rel='stylesheet' type='text/css'>
+  <link href='style.css' rel='stylesheet' type='text/css'>
+  <meta name="viewport" content="initial-scale=1, width=device-width, maximum-scale=1, minimum-scale=1, user-scalable=no">
+  
+  
+  <script>
+	  $(document).ready(function(){
+      $(".main").onepage_scroll({
+        sectionContainer: "section",
+        responsiveFallback: 600,
+        loop: true
+      });
+		});
+		
+	</script>
+</head>
+<body>
+
+
+  <script>
+    
+    var todaysDate = new Date();
+    var thisMonday = new Date();
+    thisMonday.setDate(thisMonday.getDate() + (1 + 7 - thisMonday.getDay()) % 7);
+    //console.log(thisMonday)
+
+    var d = new Date();
+      var month = new Array();
+      month[0] = "JAN";
+      month[1] = "FEB";
+      month[2] = "MAR";
+      month[3] = "APR";
+      month[4] = "MAY";
+      month[5] = "JUN";
+      month[6] = "JUL";
+      month[7] = "AUG";
+      month[8] = "SEP";
+      month[9] = "OCT";
+      month[10] = "NOV";
+      month[11] = "DEC";
+      var n = month[d.getMonth()];
+
+    window.fbAsyncInit = function() {
+      FB.init({
+        appId            : '431071407288985',
+        autoLogAppEvents : true,
+        xfbml            : true,
+        version          : 'v2.10'
+      });
+      FB.AppEvents.logPageView();
+
+
+      var token = "431071407288985|Wpg2oGMuVl5lguXu4k2e0be3n6w";
+      
+      
+
+
+      /* make the API call */
+      FB.api(
+        '/ljubljanaafterdark/events?fields=cover,start_time,id,place,name&limit=100',
+        'GET',
+        {},
+        function(response) {
+          
+          var counter = 0;
+          var todayseventscounter = 0;
+
+          //filter for time - remove expired events
+          for (var k = response.data.length-1; k > 0; k--) {
+            if (new Date(response.data[k].start_time).getTime() < todaysDate.getTime() ){
+              //console.log(k);
+              response.data.splice(k, 1);  
+              
+            }else {
+              //dont delete cell
+            };
+            
+          };
+
+          //console.log(response.data.length);
+          for (var k = response.data.length-1; k > 0; k--) {
+
+          //for(var k in response.data) {
+            //console.log(response.data[k]);
+
+            
+
+            fill = `
+                  <event>
+                    <img class="thumbnail" src="` + response.data[k].cover.source + `" href="https://www.facebook.com/events/`+ response.data[k].id +`"> 
+                    <div class="date">
+                      <h2s>`+ month[new Date(response.data[k].start_time).getMonth()] +`</h2s></br>
+                      <h1s>`+ new Date(response.data[k].start_time).getDate() +`</h1s>
+                    </div>
+                    <div class="meta">
+                      <h3s><a href="https://www.facebook.com/events/`+ response.data[k].id +`">` + response.data[k].name.substring(0, 25) + `</a></h3s></br>
+                      <h4s>`+ response.data[k].place.name +`</h4s>
+                    </div>
+                  </event>
+                `;
+
+              if ( counter < 9 
+                && new Date(response.data[k].start_time).toDateString() == todaysDate.toDateString()
+                ) {
+                //console.log(k);
+                document.getElementById("firstpageresults").innerHTML += fill
+                todayseventscounter ++;
+              }else if ( counter > 9 
+                          && counter < 19 
+                          || new Date(response.data[k].start_time).getTime() < thisMonday.getTime() 
+                          ){
+                document.getElementById("secondpageresults").innerHTML += fill
+              }
+
+
+
+              if (todayseventscounter == 0) {
+                document.getElementById("firstpageresults").innerHTML += `
+                <p style="padding-top:40%; color:white;">No events today 💩</p>
+                `;
+                todayseventscounter++;
+              }    
+
+
+              counter ++;
+             
+          }
+
+          
+          
+        }
+      , {access_token: token});
+
+    };
+
+
+
+    
+
+    (function(d, s, id){
+       var js, fjs = d.getElementsByTagName(s)[0];
+       if (d.getElementById(id)) {return;}
+       js = d.createElement(s); js.id = id;
+       js.src = "https://connect.facebook.net/en_US/sdk.js";
+       fjs.parentNode.insertBefore(js, fjs);
+     }(document, 'script', 'facebook-jssdk'));
+  </script>
+
+
+  <div class="wrapper">
+	  <div class="main">
+	    
+      <section class="page1">
+        <div class="page_container">
+          
+          
+          <p>
+            <img src="afterdark_fbcover_transparentbackground.png">
+            <h2>
+          Vsi party dogodki na enem mestu</h2>
+        </p>
+          
+          
+  	    </div>
+  	    <img src="bar-neon-back.jpg" alt="phones">
+        <img src="bar-neon.png" class="flicker-in-2" alt="phones">
+
+      </section>
+	    
+	    <section class="page2 first">
+
+	      <div class="page_container" id="firstpageresults">
+
+          <h3>Today:</h3>
+          
+        </div>
+
+      </section>
+
+      <section class="page2 second">
+
+        <div class="page_container" id="secondpageresults">
+          <h3>This week:</h3>
+        </div>
+        
+      </section>
+	    
+      <section class="page3">
+        <div class="page_container">
+          <h1>AfterDark</h1>
+          <h2>Ljubljanski dogodki na enem mestu.</h2>
+          <h2></h2>
+          <div class="btns">
+            <a class="reload btn" href="mailto:martin.grazer@gmail.com">Kontakt</a>
+          </div>
+          <p style="text-align: left;">Copyright AfterDark 2017</p>
+        </div>
+      </section>
+
+	    
+    </div>
+    
+    
+  </div>
+</body>
+</html>
