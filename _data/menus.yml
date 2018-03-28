@@ -1,7 +1,4 @@
 - name: HOME
-  url: /events/
-  icon: home
-- name: LUFT
   url: /
   icon: home
 - name: CLUBS
