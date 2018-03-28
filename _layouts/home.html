@@ -67,7 +67,7 @@ layout: default
   </div>
 
 
-  <div class="mdui-card">
+  <div class="mdui-card" style="    margin-top: 96px;">
       <div class="mdui-card-content">
 
 
@@ -78,7 +78,7 @@ layout: default
         </div>
       </div>
   </div>
-    <div class="mdui-card">
+    <div class="mdui-card" style="    margin-top: 25px;">
         <div class="mdui-card-content">
 
         <div class="page_container row" id="secondpageresults">
@@ -101,12 +101,11 @@ layout: default
   <div style="z-index: 1001;
     height: 100%;
     width: 100%;
-    visibility: initial;
     position: absolute;
     top: 0;
     left: 0;
     background-color: white;" id="zastor">
-    <p align="center" style="margin-top: 50%;">
+    <p align="center" style="margin-top: 45%;">
 
       Odpiramo v petek 8. Aprila 2018! 🎉
 
@@ -129,14 +128,15 @@ layout: default
   <script>
 
 
-    var d = new Date("April 6, 2018 23:59:59");
+    var dayD = new Date("April 6, 2018 23:59:59");
     var now = new Date();
 
-    if (d > now){
-      document.getElementById("zastor").style.visibility = "initial";
-      var container = document.getElementsByClassName("mdui-container");
-      window.onscroll = function () { window.scrollTo(0, 0); };
+    if (dayD < now){ /*< is correct*/
 
+      document.getElementById("zastor").style.visibility = "hidden";
+      var container = document.getElementsByClassName("mdui-container");
+    }else{
+      window.onscroll = function () { window.scrollTo(0, 0); };
     }
 
     var todaysDate = new Date();
@@ -212,7 +212,7 @@ layout: default
                     </div>
                     <div class="col-xs-9 meta" style="">
                       <h3s><a href="https://www.facebook.com/events/`+ response.data[k].id +`">` + response.data[k].name.substring(0, 25) + `</a></h3s></br>
-                      <h4s>`+ response.data[k].place.name.substring(0, 12) +`</h4s>
+                      <h4s>`+ response.data[k].place.name.substring(0, 14) +`</h4s>
                     </div>
 
                   </div>
