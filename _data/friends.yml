@@ -17,3 +17,23 @@
   image: https://scontent.flju1-1.fna.fbcdn.net/v/t1.0-9/1530442_10151871856314013_1364127043_n.jpg?_nc_cat=0&oh=0d19b84a8ae86c8931a680192127a468&oe=5B34FC28
   url: https://www.facebook.com/cvetlicarna.mediapark/
   describe: Kranjčeva 20, 1000 Ljubljana, Slovenia
+
+- name: Top
+  image: https://scontent.flju1-1.fna.fbcdn.net/v/t31.0-8/10265561_10152110750864135_3332799272683885140_o.jpg?_nc_cat=0&_nc_eui2=v1%3AAeEVaNx31lHezMpjgRavANljChntzl7DHz9sbezMWHeOOQevrjkQWshZJ9JCivW2zundRSAE_1eKF3S5tW1BgSGD-UxGXdT2k5MsK8_f7puETg&oh=9120f4148adf72681c0f77bf4d27a3b7&oe=5B385DA4
+  url: https://www.facebook.com/TOP-eat-party-243587709134/?ref=br_rs
+  describe: Tomšičeva ulica 2 Ljubljana, Slovenia
+
+- name: Companieros
+  image: https://scontent.flju1-1.fna.fbcdn.net/v/t31.0-8/17917987_1973200939636328_5401017863235570197_o.png?_nc_cat=0&_nc_eui2=v1%3AAeG1SmG8c6JqhyKwyp7HA_TUtkQnxiIBUIet75l4z0921B5yaUGKb4-wQICcL8FbUtVsKyvw5Oss1gURmiRmZfdqOWSCecOTWsgHlxtJz-I5FA&oh=c9784fc745520fe87380de0a2fc8ec26&oe=5B7335BB
+  url: https://www.facebook.com/companeros.ljubljanapolnprofil/
+  describe: Slovenska cesta 51 Ljubljana, Slovenia
+
+- name: Shooters Club Ljubljna
+  image: https://scontent.flju1-1.fna.fbcdn.net/v/t1.0-9/11228512_1516506495314651_7336259380673817039_n.jpg?_nc_cat=0&_nc_eui2=v1%3AAeGCPTgPPqpEVnNXnRfXr52B2xtdWWB9bVWn-nZLJduiRlXJWAMimHH22adnqFJrb2PTzQcMHWa58-ODpE8lar4Do9taf75HxJIaybLPmCfSNQ&oh=607830bac60d20622e1675d4b47dc35b&oe=5B2D899D
+  url: https://www.facebook.com/ShootersClubLjubljana/
+  describe: Nazorjeva 6a Ljubljana, Slovenia
+
+- name: Centralna Postaja Ljubljana
+  image: https://scontent.flju1-1.fna.fbcdn.net/v/t1.0-1/c69.0.480.480/p480x480/374521_393494447450537_1051263270_n.jpg?_nc_cat=0&_nc_eui2=v1%3AAeEWAMMBEQ3nyrULnXiPqKzBWI3KaTZvJTZanrtV8j-RKd51vjLKkSw4R3fENXIQ9sBW3obAEHXSFiUe-mihcCbq0P3eA4Dfhmo_1_ttVx74Bw&oh=5cca4cf09b8efd6de6ab635ba2197f19&oe=5B6BE5A3
+  url:  https://www.facebook.com/centralnapostajaljubljana/
+  describe: Trubarjeva 23 Ljubljana, Slovenia
