@@ -1,9 +1,19 @@
-- name: KeJun
-  image: https://ooo.0o0.ooo/2017/05/26/5928368d409dd.png
-  url: https://kejun.me
-  describe: 二次元智障
+- name: Cirkus
+  image: https://scontent.flju1-1.fna.fbcdn.net/v/t1.0-9/13680534_1233498480008123_6033043190978306003_n.jpg?_nc_cat=0&oh=059eaced475cfc8a9e131b20fd4c8835&oe=5B404CC1
+  url: https://www.facebook.com/cirkus.klub/
+  describe: Trg mladinskih delovnih brigad 7, 1000 Ljubljana, Slovenia
 
-- name: MDUI
-  image: 
-  url: https://www.mdui.org/
-  describe: 一套用于开发 Material Design 网页的前端框架
+- name: Orto Bar
+  image: https://scontent.flju1-1.fna.fbcdn.net/v/t1.0-9/26399_378463886102_4569419_n.jpg?_nc_cat=0&oh=a528723cdfef91a669a4d59d28d0525b&oe=5B2C7EAC
+  url: https://www.facebook.com/noplacelikeorto/
+  describe: Grablovičeva ulica 1, 1000 Ljubljana, Slovenia
+
+- name: K4
+  image: https://scontent.flju1-1.fna.fbcdn.net/v/t1.0-9/485715_345806488808365_1072025562_n.jpg?_nc_cat=0&oh=5bd15214c01782829362cc7d756bbcc8&oe=5B3EED65
+  url: https://www.facebook.com/klubk4/
+  describe: Kersnikova 4, 1000 Ljubljana, Slovenia
+
+- name: Cvetličarna
+  image: https://scontent.flju1-1.fna.fbcdn.net/v/t1.0-9/1530442_10151871856314013_1364127043_n.jpg?_nc_cat=0&oh=0d19b84a8ae86c8931a680192127a468&oe=5B34FC28
+  url: https://www.facebook.com/cvetlicarna.mediapark/
+  describe: Kranjčeva 20, 1000 Ljubljana, Slovenia
